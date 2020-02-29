@@ -1,0 +1,1263 @@
+/*
+
+@import
+$varcs
+@mixin & @include
+
+@extend
+
+grouping
+
+*/
+body {
+  font-family: "roboto mono";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 3, 41, 0.9);
+}
+
+.text-color {
+  color: gray;
+}
+
+.modal {
+  z-index: 999999 !important;
+}
+
+.line {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  left: 47.5%;
+  background-color: #010329;
+}
+
+.features .feat h1, .pricing h1, .screenshot h1, .testimonial h1, .testimonial h3, .contact h1, .follow h1 {
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+@font-face {
+  font-family: brand;
+  src: url(../fonts/Selfie_Printed.otf);
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: 900px;
+  }
+}
+
+/* START STYLING NAVBAR
+****************************/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "rubik";
+  margin-top: 0;
+}
+
+p {
+  font-family: "roboto";
+}
+
+.navbar-inverse {
+  padding-top: 10px;
+  background: none;
+  border: none;
+  height: 60px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  z-index: 99999;
+}
+
+.header {
+  position: relative;
+  background: url(../images/1.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 900px;
+  }
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 29vh;
+  background: url(../images/wave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.navbar-header {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #010329;
+  }
+}
+
+.navbar-inverse .navbar-brand {
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  font-size: 30px;
+  padding: 0;
+  font-weight: 20px;
+  font-family: "lobster";
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-brand img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-inverse .navbar-brand img {
+    position: absolute;
+    left: 20px;
+    width: 50%;
+  }
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #062e2e;
+}
+
+.navbar-toggle {
+  float: right;
+  background: white;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #010329 !important;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+  background: #36d1dc !important;
+}
+
+.navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
+  background: white !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-size: 15px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #1a8a92;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: #36d1dc;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: none;
+}
+
+.affix {
+  background-color: #010329;
+  width: 100%;
+  height: 75px;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 25px -3px gray;
+  -o-box-shadow: 0px 0px 25px -3px gray;
+  box-shadow: 0px 0px 25px -3px gray;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.affix li a {
+  color: white;
+}
+
+/*START STYLING JUMPOTRON
+***************************/
+.tron {
+  color: white;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .tron {
+    text-align: center;
+  }
+}
+
+.tron h1 {
+  font-size: 3em;
+  font-family: "rubik";
+  letter-spacing: 4px;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.tron p {
+  margin-top: 30px;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.tron .btns {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.tron .btns .btn {
+  margin-top: 30px;
+  border-radius: 0px;
+  font-size: 1em;
+}
+
+.tron .btns i {
+  font-size: 1.3em;
+}
+
+.btn-success {
+  background: white;
+  color: #010329 !important;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px 20px !important;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: transparent;
+  color: white !important;
+  border: 2px solid white;
+}
+
+.btn-primary {
+  background-color: #36d1dc !important;
+  color: white !important;
+  border-radius: 25px !important;
+  border: 3px solid #36d1dc !important;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  border: 3px solid #010329 !important;
+  background-color: #010329 !important;
+  color: white !important;
+}
+
+.tron .btns .btn-primary {
+  -webkit-box-shadow: 0px 0px 25px 0px #36d1dc;
+  -o-box-shadow: 0px 0px 25px 0px #36d1dc;
+  box-shadow: 0px 0px 25px 0px #36d1dc;
+}
+
+.tron .btns .btn-danger {
+  border: 3px solid white;
+  background-color: transparent;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  margin-left: 10px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.tron .btns .btn-danger:hover, .tron .btns .btn-danger:active {
+  border: 3px solid #36d1dc;
+  background-color: transparent;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #36d1dc;
+}
+
+/*start styling square 
+*********************/
+.cont .square {
+  position: absolute;
+  height: 370px;
+  width: 250px;
+  border-left: 2px solid #36d1dc;
+  border-bottom: 2px solid #36d1dc;
+  left: 180px;
+  top: 160px;
+  z-index: 4;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.cont img {
+  margin-top: 20px;
+  height: 500px;
+  position: relative;
+  z-index: 5;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+/*start styling about section
+***************************/
+.about {
+  background-color: white;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  color: #062e2e;
+}
+
+.about .line {
+  background-color: #010329;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.about h3 {
+  text-align: center;
+}
+
+.about .serv {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.about .box {
+  border-top: 2px solid rgba(6, 46, 46, 0.5);
+  border-right: 2px solid rgba(6, 46, 46, 0.5);
+  padding: 30px 20px 10px 35px;
+  margin-top: 20px;
+  height: 150px;
+  position: relative;
+}
+
+.about .box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 0px;
+  height: 0px;
+  border: 2px solid transparent;
+}
+
+.about .box:hover:before {
+  -webkit-animation: animate 0.8s linear forwards;
+          animation: animate 0.8s linear forwards;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #010329;
+    border-right-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #010329;
+    border-right-color: #010329;
+  }
+  100% {
+    width: 100%;
+    height: 152px;
+    border-top-color: #010329;
+    border-right-color: #010329;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #010329;
+    border-right-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: #010329;
+    border-right-color: #010329;
+  }
+  100% {
+    width: 100%;
+    height: 152px;
+    border-top-color: #010329;
+    border-right-color: #010329;
+  }
+}
+
+.about .icons i {
+  position: absolute;
+  background-color: #010329;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: white;
+  top: -30px;
+  left: 0;
+}
+
+/*start styling section features
+*************************************/
+.features {
+  margin-bottom: 0;
+  background: url(../images/2.jpeg) no-repeat fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: white;
+}
+
+.features .line {
+  background-color: white;
+}
+
+.feat {
+  background-color: rgba(1, 3, 41, 0.9);
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.feat1 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.features .feat h1 {
+  color: white;
+}
+
+.features .feats {
+  margin-top: 40px;
+}
+
+.features .wing {
+  text-align: right;
+  margin-top: 50px;
+}
+
+.wing .icon, .wing1 .icon1 {
+  position: relative;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: #36d1dc;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.wing .icon {
+  float: right;
+}
+
+.wing .wave,
+.wing .wave1, .wing1 .wave2, .wing1 .wave3 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: #36d1dc;
+  -webkit-animation: pulseEffect 2s infinite linear;
+          animation: pulseEffect 2s infinite linear;
+}
+
+
+.wing .wave1, .wing1 .wave3 {
+  -webkit-animation: pulseEffect1 2s infinite linear;
+          animation: pulseEffect1 2s infinite linear;
+}
+
+.wing .wave,
+.wing .wave1 {
+  right: 16px;
+}
+
+@-webkit-keyframes pulseEffect {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulseEffect1 {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.wing1 .wave2, .wing1 .wave3 {
+  left: 20px;
+}
+
+.wing .text {
+  width: 75%;
+}
+
+.wing .text p {
+  font-size: 0.9em;
+}
+
+.feats img {
+  width: 80%;
+}
+
+.features .wing1 {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.wing1 .icon1 {
+  float: left;
+  margin-left: 5px;
+}
+
+.wing1 .text1 {
+  width: 75%;
+  margin-left: 95px;
+}
+
+.wing1 .text1 p {
+  font-size: 0.9em;
+}
+
+/* start styling price section 
+***********************************/
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  background-color: white;
+}
+
+.pricing .line {
+  background-color: #010329;
+}
+
+.main-price {
+  margin-top: 80px;
+}
+
+.price .digit {
+  text-align: center;
+  background-color: #010329;
+  padding: 20px 20px;
+}
+
+.price .digit p {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.price .digit p span {
+  font-size: 0.7em;
+}
+
+.price ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0px 30px 0px 30px;
+}
+
+.price ul li {
+  padding-top: 0px;
+}
+
+.price ul hr {
+  margin: 5px;
+}
+
+.price button {
+  background-color: transparent;
+  border: 2px solid #010329;
+  border-radius: 25px;
+  color: #010329;
+  margin-left: 30%;
+  margin-top: 10px;
+  padding: 5px 25px 5px 25px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.price button:hover, .price button:active {
+  background-color: #010329;
+  color: white;
+}
+
+@media (min-width: 767px) {
+  .zoom {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    position: relative;
+    z-index: 22;
+  }
+}
+
+.pricing .price {
+  background-color: white;
+  margin-top: 40px;
+  position: relative;
+  padding-top: 50px;
+  height: 480px;
+  -webkit-box-shadow: 0px 0px 35px -10px gray;
+  -o-box-shadow: 0px 0px 35px -10px gray;
+  box-shadow: 0px 0px 35px -10px gray;
+}
+
+.pricing .price h3 {
+  font-size: 2em;
+}
+
+.pricing .price .digit {
+  margin-top: 15px;
+  padding: 25px 25px;
+}
+
+.pricing .price .digit p {
+  font-size: 1.7em;
+  color: white;
+}
+
+.pricing .price .digit p span {
+  font-size: 0.75em;
+}
+
+.pricing .price ul {
+  margin-top: 25px;
+  padding: 0px 30px 0px 30px;
+}
+
+.pricing .price ul li {
+  padding-top: 0px;
+  font-size: 1.2em;
+}
+
+.pricing .price ul hr {
+  margin: 7px;
+}
+
+.pricing .price button {
+  background-color: transparent;
+  border: 2px solid #010329;
+  border-radius: 25px;
+  color: #010329;
+  margin-left: 30%;
+  margin-top: 10px;
+  padding: 7px 27px 7px 27px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.pricing .price button:hover, .pricing .price button:active {
+  background-color: #010329;
+  color: white;
+}
+
+.big .triangle {
+  border-top: 35px solid #36d1dc;
+}
+
+.triangle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 35px solid #010329;
+  border-left: 35px solid transparent;
+}
+
+.main-price h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* styling screenshots section
+*******************************/
+.screenshot {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: #010329;
+}
+
+.screenshot h1 {
+  color: white;
+}
+
+.screenshot .line {
+  background-color: white;
+}
+
+.screenshot .owl-carousel .owl-next,
+.screenshot .owl-carousel .owl-prev {
+  background-color: #36d1dc !important;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 40%;
+  z-index: 9999;
+  line-height: 20px !important;
+}
+
+.screenshot .owl-carousel .owl-next span,
+.screenshot .owl-carousel .owl-prev span {
+  font-size: 4em;
+  color: white;
+}
+
+.screenshot .owl-carousel .owl-next {
+  right: -20px;
+}
+
+.screenshot .owl-carousel .owl-prev {
+  left: -20px;
+}
+
+.screenshot .main-screenshots {
+  margin-top: 100px;
+}
+
+.iphone {
+  left: 50.1%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  top: 235px;
+  position: absolute;
+  z-index: 99;
+  width: 240px;
+}
+
+@media (max-width: 1201px) {
+  .iphone {
+    width: 195px;
+  }
+}
+
+@media (max-width: 992px) {
+  .iphone {
+    width: 255px;
+  }
+}
+
+@media (max-width: 768px) {
+  .iphone {
+    width: 100%;
+  }
+}
+
+/* styling testimonials section
+*********************************/
+.testimonial {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f5f5f5;
+}
+
+.testimonial h3 {
+  margin-top: 60px;
+}
+
+.testimonial .line {
+  background-color: #010329;
+}
+
+.testimonial .item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.testimonial .card {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: white;
+  margin-right: 0;
+  padding: 50px 20px 20px 20px;
+  -webkit-box-shadow: 0px 0px 25px -5px gray;
+  -o-box-shadow: 0px 0px 25px -5px gray;
+  box-shadow: 0px 0px 25px -5px gray;
+}
+
+.testimonial .card img {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: -50px;
+  -webkit-box-shadow: 0px 10px 25px -5px gray;
+  -o-box-shadow: 0px 10px 25px -5px gray;
+  box-shadow: 0px 10px 25px -5px gray;
+}
+
+.testimonial .icon2 {
+  margin-top: 10px;
+  color: #36d1dc;
+  cursor: pointer;
+}
+
+.testimonial .punctuation i {
+  color: #d9d9d9;
+  font-size: 1.8em;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #010329;
+}
+
+/*styling post section 
+**********************************/
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.team .line {
+  background-color: #010329;
+}
+
+.team p {
+  margin-top: 50px;
+}
+
+.team .con {
+  margin-top: 50px;
+}
+
+.team .card6 {
+  -webkit-box-shadow: 0px 0px 10px -5px gray;
+  -o-box-shadow: 0px 0px 10px -5px gray;
+  box-shadow: 0px 0px 10px -5px gray;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.team .card6:hover {
+  -webkit-box-shadow: 0px 0px 20px -5px gray;
+  -o-box-shadow: 0px 0px 20px -5px gray;
+  box-shadow: 0px 0px 20px -5px gray;
+}
+
+.team .card3 .card6 img {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 10px 35px -5px gray;
+  -o-box-shadow: 0px 10px 35px -5px gray;
+  box-shadow: 0px 10px 35px -5px gray;
+  height: 100px;
+  width: 100px;
+}
+
+.team .card3 .card6 h4 {
+  text-align: center;
+}
+
+.team .card3 .card6 p {
+  margin-top: 0px;
+}
+
+.team .icon-post {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.team .icon-post .icon5 {
+  display: inline-block;
+  color: #010329;
+  font-size: 1.3em;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.team .icon-post .icon5:hover {
+  color: #062e2e;
+}
+
+/*styling statistics section
+***********************************/
+.statistics {
+  background: url(../images/3.jpeg) fixed no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: white;
+}
+
+.statistics .stat {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: rgba(1, 3, 41, 0.9);
+}
+
+.statistics .number:hover .icon3 i {
+  color: #36d1dc;
+}
+
+.statistics .countdown-item .icon3 {
+  height: 80px;
+  width: 85px;
+  line-height: 85px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 15px 25px -5px black;
+  -o-box-shadow: 0px 15px 25px -5px black;
+  box-shadow: 0px 15px 25px -5px black;
+}
+
+.statistics .countdown-item {
+  margin-top: 20px;
+}
+
+.statistics .countdown-item .icon3 i {
+  font-size: 35px;
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.statistics .timer {
+  margin-top: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* styling donwload section
+*********************************/
+.download {
+  background: url(../images/8.jpeg) no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: white;
+}
+
+.download p {
+  margin-top: 80px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.download .overlay {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(1, 3, 41, 0.85);
+}
+
+.download .button1 {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.download .button1 i {
+  font-size: 1.4em;
+}
+
+.download .button1 .btn-primary {
+  border: 3px solid #010329;
+  background-color: transparent;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #010329;
+  background-color: #010329;
+  color: white;
+}
+
+.download .button1 .btn-danger {
+  border: 3px solid #062e2e;
+  background-color: transparent;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #062e2e;
+  background-color: #062e2e;
+  color: white;
+}
+
+.download .button1 img {
+  cursor: pointer;
+}
+
+.download .phone img {
+  position: relative;
+  top: 50px;
+  width: 50%;
+}
+
+/*start styling Subscribe section
+************************************/
+.subscribe {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: #f5f5f5;
+}
+
+.subscribe .line {
+  background-color: #010329;
+}
+
+.subscribe p {
+  margin-top: 30px;
+}
+
+.subscribe .subs {
+  margin-top: 80px;
+}
+
+.subscribe .subs input {
+  padding-left: 20px;
+  background-color: white;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 55px;
+  width: 70%;
+  max-width: 500px;
+}
+
+.subscribe .subs input[type="email"]::-webkit-input-placeholder {
+  font-family: "roboto";
+  font-size: 1.1em;
+}
+
+.subscribe .subs button {
+  background-color: #010329;
+  padding: 15px;
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid #010329;
+  position: relative;
+  right: 10px;
+  margin-bottom: 5px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.subscribe .subs button:hover {
+  border: 2px solid #010329;
+  background: transparent;
+  color: #010329;
+}
+
+/*start styling contact us section
+**********************************/
+.contact {
+  background: url(../images/world.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.contact .line {
+  background-color: #010329;
+}
+
+.contact .contain .para {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contain {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-item {
+  margin-top: 50px;
+}
+
+.form-group label {
+  margin-left: 10px;
+}
+
+.form-group input,
+.form-group select {
+  border-radius: 25px;
+}
+
+.form-group input,
+.contact .form-group textarea::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+.form-group textarea {
+  border-radius: 25px;
+  height: 150px;
+}
+
+.contact .btn-success {
+  border: 3px solid #010329;
+  background-color: transparent;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #010329;
+  background-color: white;
+  float: right;
+  padding: 10px 30px 10px 30px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.contact .btn-success:hover {
+  background-color: #010329;
+  color: white;
+}
+
+.contact .cards {
+  padding-left: 100px;
+}
+
+.contact .cards .card {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  height: 100px;
+  position: relative;
+}
+
+.contact .cards .card .icon4 {
+  float: left;
+  width: 25%;
+}
+
+.contact .cards .card .text {
+  width: 75%;
+  float: right;
+}
+
+.contact .card .icon4 i {
+  color: #010329;
+  font-size: 3em;
+}
+
+/* start styling follow Us section
+******************************************/
+.follow {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  background-color: #010329;
+}
+
+.follow h1 {
+  color: white;
+}
+
+.follow .icon5 {
+  margin: 50px 90px;
+}
+
+.follow .icon5 .icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 45px;
+  font-size: 1.65em;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.follow .icon5 .icon:hover {
+  background-color: white;
+  color: #010329;
+}
+
+.follow hr {
+  border: 0.5px solid #36d1dc;
+}
+
+.follow .text {
+  color: white;
+  margin-top: 50px;
+}
+
+.follow .text p span {
+  color: #062e2e;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

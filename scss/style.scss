@@ -1,0 +1,1033 @@
+/*
+
+@import
+$varcs
+@mixin & @include
+
+@extend
+
+grouping
+
+*/
+
+@import "_general";
+
+@import "_responsive";
+
+/* START STYLING NAVBAR
+****************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "rubik";
+  margin-top: 0;
+}
+p {
+  font-family: "roboto";
+}
+.navbar-inverse {
+  padding-top: 10px;
+  background: none;
+  border: none;
+  // color: $white;
+  height: 60px;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  z-index: 99999;
+}
+.header {
+  position: relative;
+  background: url(../images/1.jpeg);
+  background-size: cover;
+  height: 100vh;
+  @media #{$max-mobile} {
+    height: 900px;
+  }
+}
+.header:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 29vh;
+  background: url(../images/wave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+.navbar-header {
+  width: 20%;
+  @media #{$max-mobile} {
+    width: 100%;
+  }
+}
+.navbar-collapse {
+  @media #{$max-mobile} {
+    background-color: $mainColor;
+  }
+}
+.navbar-inverse .navbar-brand {
+  font-weight: bold;
+  color: $white;
+  letter-spacing: 4px;
+  font-size: 30px;
+  padding: 0;
+  font-weight: 20px;
+  font-family: "lobster";
+  @include transition();
+  img {
+    width: 100%;
+    @media #{$max-mobile} {
+      position: absolute;
+      left: 20px;
+      width: 50%;
+    }
+  }
+  &:hover {
+    color: $secColor;
+  }
+}
+.navbar-toggle {
+  float: right;
+  background: $white;
+  .icon-bar {
+    background-color: $mainColor !important;
+  }
+  &:hover,
+  &:focus {
+    background: $thirdColor !important;
+    .icon-bar {
+      background: $white !important;
+    }
+  }
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: $white;
+  font-size: 15px;
+  @include transition();
+  &:hover,
+  &:focus {
+    color: darken($thirdColor, 20%);
+  }
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: $thirdColor;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: none;
+}
+
+.affix {
+  background-color: $mainColor;
+  width: 100%;
+  height: 75px;
+  z-index: 999;
+  @include shadow(0px, 0px, 25px, -3px, $gray);
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  @include transition();
+  li a {
+    color: $white;
+  }
+}
+
+/*START STYLING JUMPOTRON
+***************************/
+
+.tron {
+  color: $white;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  @media #{$max-mobile} {
+    text-align: center;
+  }
+}
+
+.tron h1 {
+  font-size: 3em;
+  font-family: "rubik";
+  letter-spacing: 4px;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+}
+
+.tron p {
+  margin-top: 30px;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+}
+.tron .btns {
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+.tron .btns .btn {
+  margin-top: 30px;
+  border-radius: 0px;
+  font-size: 1em;
+}
+.tron .btns i {
+  font-size: 1.3em;
+}
+.btn-success {
+  background: $white;
+  color: $mainColor !important;
+  border: 2px solid $white;
+  border-radius: 25px;
+  padding: 10px 20px !important;
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: $white !important;
+    border: 2px solid $white;
+  }
+}
+.btn-primary {
+  background-color: $thirdColor !important;
+  color: $white !important;
+  border-radius: 25px !important;
+  border: 3px solid $thirdColor !important;
+  @include transition();
+  &:hover,
+  &:active {
+    border: 3px solid $mainColor !important;
+    background-color: $mainColor !important;
+    color: $white !important;
+  }
+}
+.tron .btns .btn-primary {
+  @include shadow(0px, 0px, 25px, 0px, $thirdColor);
+}
+.tron .btns .btn-danger {
+  @include btn1($white);
+  margin-left: 10px;
+  @include transition();
+  &:hover,
+  &:active {
+    @include btn1($thirdColor);
+  }
+}
+
+/*start styling square 
+*********************/
+
+.cont .square {
+  position: absolute;
+  height: 370px;
+  width: 250px;
+  border-left: 2px solid $thirdColor;
+  border-bottom: 2px solid $thirdColor;
+  left: 180px;
+  top: 160px;
+  z-index: 4;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+}
+.cont img {
+  margin-top: 20px;
+  height: 500px;
+  position: relative;
+  z-index: 5;
+  animation-delay: 1.3s;
+  animation-duration: 1s;
+}
+
+/*start styling about section
+***************************/
+
+.about {
+  background-color: $white;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  color: $secColor;
+  .line {
+    background-color: $mainColor;
+  }
+}
+.about h1 {
+  text-align: center;
+}
+.about h3 {
+  text-align: center;
+}
+.about .serv {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.about .box {
+  border-top: 2px solid rgba(6, 46, 46, 0.5);
+  border-right: 2px solid rgba(6, 46, 46, 0.5);
+  padding: 30px 20px 10px 35px;
+  margin-top: 20px;
+  height: 150px;
+  position: relative;
+}
+
+.about .box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 0px; //350
+  height: 0px; //150
+  border: 2px solid transparent;
+}
+
+.about .box:hover:before {
+  animation: animate 0.8s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: $mainColor;
+    border-right-color: transparent;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: $mainColor;
+    border-right-color: $mainColor;
+  }
+  100% {
+    width: 100%;
+    height: 152px;
+    border-top-color: $mainColor;
+    border-right-color: $mainColor;
+  }
+}
+.about .icons i {
+  position: absolute;
+  background-color: $mainColor;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  color: $white;
+  top: -30px;
+  left: 0;
+}
+
+/*start styling section features
+*************************************/
+.features {
+  margin-bottom: 0;
+  background: url(../images/2.jpeg) no-repeat fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: $white;
+  .line {
+    background-color: $white;
+  }
+}
+.feat {
+  background-color: rgba($mainColor, 0.9);
+  width: 100%;
+  margin-bottom: 0;
+}
+.feat1 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.features .feat h1 {
+  color: $white;
+  @extend %main-h1;
+}
+
+.features .feats {
+  margin-top: 40px;
+}
+
+.features .wing {
+  text-align: right;
+  margin-top: 50px;
+}
+
+%icon {
+  position: relative;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: $thirdColor;
+  z-index: 2;
+  cursor: pointer;
+}
+.wing .icon {
+  @extend %icon;
+  float: right;
+}
+%wave {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: $thirdColor;
+  animation: pulseEffect 2s infinite linear;
+}
+%wave1 {
+  animation: pulseEffect1 2s infinite linear;
+}
+.wing .wave,
+.wing .wave1 {
+  @extend %wave;
+  right: 16px;
+}
+.wing .wave1 {
+  @extend %wave1;
+}
+@-webkit-keyframes pulseEffect {
+  from {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(2.7);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulseEffect1 {
+  from {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.wing1 .wave2 {
+  @extend %wave;
+  left: 20px;
+}
+.wing1 .wave3 {
+  @extend .wave2;
+  @extend %wave1;
+}
+.wing .text {
+  width: 75%;
+}
+.wing .text p {
+  font-size: 0.9em;
+}
+.feats img {
+  width: 80%;
+}
+.features .wing1 {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.wing1 .icon1 {
+  @extend %icon;
+  float: left;
+  margin-left: 5px;
+}
+.wing1 .text1 {
+  width: 75%;
+  margin-left: 95px;
+}
+.wing1 .text1 p {
+  font-size: 0.9em;
+}
+
+/* start styling price section 
+***********************************/
+
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  background-color: $white;
+  .line {
+    background-color: $mainColor;
+  }
+}
+
+.pricing h1 {
+  @extend %main-h1;
+}
+.main-price {
+  margin-top: 80px;
+}
+
+.price {
+  .digit {
+    text-align: center;
+    background-color: $mainColor;
+    padding: 20px 20px;
+    p {
+      font-size: 1.6em;
+      font-weight: bold;
+      span {
+        font-size: 0.7em;
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0px 30px 0px 30px;
+    li {
+      padding-top: 0px;
+    }
+    hr {
+      margin: 5px;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: 2px solid $mainColor;
+    border-radius: 25px;
+    color: $mainColor;
+    margin-left: 30%;
+    margin-top: 10px;
+    padding: 5px 25px 5px 25px;
+    @include transition();
+    &:hover,
+    &:active {
+      background-color: $mainColor;
+      color: $white;
+    }
+  }
+}
+
+.zoom {
+  @media #{$min-mobile} {
+    @include scale(1.2);
+    position: relative;
+    z-index: 22;
+  }
+}
+
+.pricing .price {
+  background-color: $white;
+  margin-top: 40px;
+  position: relative;
+  padding-top: 50px;
+  height: 480px;
+  @include shadow(0px, 0px, 35px, -10px, $gray);
+  h3 {
+    font-size: 2em;
+  }
+
+  .digit {
+    margin-top: 15px;
+    padding: 25px 25px;
+    p {
+      font-size: 1.7em;
+      color: $white;
+      span {
+        font-size: 0.75em;
+      }
+    }
+  }
+  ul {
+    margin-top: 25px;
+    padding: 0px 30px 0px 30px;
+    li {
+      padding-top: 0px;
+      font-size: 1.2em;
+    }
+    hr {
+      margin: 7px;
+    }
+  }
+  button {
+    background-color: transparent;
+    border: 2px solid $mainColor;
+    border-radius: 25px;
+    color: $mainColor;
+    margin-left: 30%;
+    margin-top: 10px;
+    padding: 7px 27px 7px 27px;
+    @include transition();
+    &:hover,
+    &:active {
+      background-color: $mainColor;
+      color: $white;
+    }
+  }
+}
+
+.big .triangle {
+  border-top: 35px solid $thirdColor;
+}
+.triangle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 35px solid $mainColor;
+  border-left: 35px solid transparent;
+}
+.main-price h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* styling screenshots section
+*******************************/
+
+.screenshot {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  position: relative;
+  background-color: $mainColor;
+  h1 {
+    @extend %main-h1;
+    color: $white;
+  }
+  .line {
+    background-color: $white;
+  }
+  .owl-carousel {
+    .owl-next,
+    .owl-prev {
+      background-color: $thirdColor !important;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 40%;
+      z-index: 9999;
+      line-height: 20px !important;
+      span {
+        font-size: 4em;
+
+        color: $white;
+      }
+    }
+    .owl-next {
+      right: -20px;
+    }
+    .owl-prev {
+      left: -20px;
+    }
+  }
+}
+.screenshot .main-screenshots {
+  margin-top: 100px;
+}
+.iphone {
+  left: 50.1%;
+  transform: translate(-50%, 0);
+  top: 235px;
+  position: absolute;
+  z-index: 99;
+  width: 240px;
+  @media #{$max-large} {
+    width: 195px;
+  }
+  @media #{$max-medium} {
+    width: 255px;
+  }
+  @media #{$max-mobile} {
+    width: 100%;
+  }
+}
+
+/* styling testimonials section
+*********************************/
+
+.testimonial {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $fithColor;
+  h1 {
+    @extend %main-h1;
+  }
+  h3 {
+    margin-top: 60px;
+    @extend %main-h1;
+  }
+  .line {
+    background-color: $mainColor;
+  }
+}
+.testimonial .item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.testimonial .card {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: $white;
+  margin-right: 0;
+  padding: 50px 20px 20px 20px;
+  @include shadow(0px, 0px, 25px, -5px, $gray);
+}
+.testimonial .card img {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: -50px;
+  @include shadow(0px, 10px, 25px, -5px, $gray);
+}
+
+.testimonial .icon2 {
+  margin-top: 10px;
+  color: $thirdColor;
+  cursor: pointer;
+}
+
+.testimonial .punctuation i {
+  color: lighten($gray, 35%);
+  font-size: 1.8em;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: $mainColor;
+}
+
+/*styling post section 
+**********************************/
+
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .line {
+    background-color: $mainColor;
+  }
+  p {
+    margin-top: 50px;
+  }
+}
+.team .con {
+  margin-top: 50px;
+}
+.team .card6 {
+  @include shadow(0px, 0px, 10px, -5px, $gray);
+  @include transition();
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  &:hover {
+    @include shadow(0px, 0px, 20px, -5px, $gray);
+  }
+}
+
+.team .card3 .card6 img {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  @include shadow(0px, 10px, 35px, -5px, $gray);
+  height: 100px;
+  width: 100px;
+}
+.team .card3 .card6 h4 {
+  text-align: center;
+}
+.team .card3 .card6 p {
+  margin-top: 0px;
+}
+.team .icon-post {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.team .icon-post .icon5 {
+  display: inline-block;
+  color: $mainColor;
+  font-size: 1.3em;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    color: $secColor;
+  }
+}
+
+/*styling statistics section
+***********************************/
+
+.statistics {
+  background: url(../images/3.jpeg) fixed no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: $white;
+}
+
+.statistics .stat {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: rgba($mainColor, 0.9);
+}
+.statistics .number {
+  &:hover {
+    .icon3 i {
+      color: $thirdColor;
+    }
+  }
+}
+.statistics .countdown-item .icon3 {
+  height: 80px;
+  width: 85px;
+  line-height: 85px;
+  border-radius: 50%;
+  @include shadow(0px, 15px, 25px, -5px, $black);
+}
+.statistics .countdown-item {
+  margin-top: 20px;
+}
+.statistics .countdown-item .icon3 i {
+  font-size: 35px;
+  color: $white;
+  @include transition();
+}
+.statistics .timer {
+  margin-top: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* styling donwload section
+*********************************/
+
+.download {
+  background: url(../images/8.jpeg) no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: $white;
+
+  p {
+    margin-top: 80px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+}
+
+.download .overlay {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  width: 100%;
+  height: 600px;
+  background-color: rgba($mainColor, 0.85);
+}
+
+.download .button1 {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.download .button1 i {
+  font-size: 1.4em;
+}
+.download .button1 .btn-primary {
+  @include btn1($mainColor);
+  background-color: $mainColor;
+  color: $white;
+}
+.download .button1 .btn-danger {
+  @include btn1($secColor);
+  background-color: $secColor;
+  color: $white;
+}
+.download .button1 img {
+  cursor: pointer;
+}
+.download .phone img {
+  position: relative;
+  top: 50px;
+  width: 50%;
+}
+
+/*start styling Subscribe section
+************************************/
+
+.subscribe {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: $fithColor;
+  .line {
+    background-color: $mainColor;
+  }
+  p {
+    margin-top: 30px;
+  }
+}
+.subscribe .subs {
+  margin-top: 80px;
+}
+.subscribe .subs input {
+  padding-left: 20px;
+  background-color: $white;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 55px;
+  width: 70%;
+  max-width: 500px;
+}
+.subscribe .subs input[type="email"]::-webkit-input-placeholder {
+  font-family: "roboto";
+  font-size: 1.1em;
+}
+
+.subscribe .subs button {
+  background-color: $mainColor;
+  padding: 15px;
+  color: $white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid $mainColor;
+  position: relative;
+  right: 10px;
+  margin-bottom: 5px;
+  @include transition;
+  &:hover {
+    border: 2px solid $mainColor;
+    background: transparent;
+    color: $mainColor;
+  }
+}
+
+/*start styling contact us section
+**********************************/
+
+.contact {
+  background: url(../images/world.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  h1 {
+    @extend %main-h1;
+  }
+  .line {
+    background-color: $mainColor;
+  }
+}
+.contact .contain .para {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contain {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgba($white, 0.85);
+}
+
+.contact-item {
+  margin-top: 50px;
+}
+.form-group label {
+  margin-left: 10px;
+}
+.form-group input,
+.form-group select {
+  border-radius: 25px;
+}
+
+.form-group input,
+.contact .form-group textarea::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+.form-group textarea {
+  border-radius: 25px;
+  height: 150px;
+}
+.contact .btn-success {
+  @include btn1($mainColor);
+  background-color: $white;
+  float: right;
+  padding: 10px 30px 10px 30px;
+  @include transition();
+  &:hover {
+    background-color: $mainColor;
+    color: $white;
+  }
+}
+.contact .cards {
+  padding-left: 100px;
+}
+.contact .cards {
+  .card {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    height: 100px;
+    position: relative;
+
+    .icon4 {
+      float: left;
+      width: 25%;
+    }
+    .text {
+      width: 75%;
+      float: right;
+    }
+  }
+}
+
+.contact .card .icon4 i {
+  color: $mainColor;
+  font-size: 3em;
+}
+
+/* start styling follow Us section
+******************************************/
+
+.follow {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  background-color: $mainColor;
+  h1 {
+    @extend %main-h1;
+    color: $white;
+  }
+}
+
+.follow .icon5 {
+  margin: 50px 90px;
+}
+
+.follow .icon5 .icon {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 45px;
+  font-size: 1.65em;
+  border-radius: 50%;
+  border: 2px solid $white;
+  color: $white;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    background-color: $white;
+    color: $mainColor;
+  }
+}
+.follow hr {
+  border: 0.5px solid $thirdColor;
+}
+
+.follow .text {
+  color: $white;
+  margin-top: 50px;
+}
+.follow .text p span {
+  color: $secColor;
+  font-weight: bold;
+}
